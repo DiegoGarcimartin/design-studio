@@ -14,6 +14,17 @@ Polish is numbers, never adjectives. Distilled from Kevin Kld's "10 rules to shi
 
 - Edges are defined by light: a hairline ring (`0 0 0 0.5px rgba(0,0,0,0.08)`) where a 1px border would go.
 - Depth is many faint layers, each at 2–8% opacity: tight contact shadow + wide soft ambient, e.g. `0 1px 2px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.02), 0 0 0 0.5px rgba(0,0,0,0.08)`. Two presets in the tokens — card and elevated — reused everywhere, animated as a whole stack on hover.
+- **Product surfaces run flatter than marketing surfaces**: in-app panels and tables get hairline edges and background-layer contrast only; the layered shadow stack is reserved for true overlays (modals, popovers, dragged items).
+
+## Field notes — measured live from Vercel, Supabase and Resend (Jul 2026)
+
+Palette-independent rules, read from computed styles of shipping dashboards; they hold for any direction the brief picks:
+
+- No pure extremes in the ink/ground pair: grounds at ~oklch(0.99)/#FAFAFA, inks at ~oklch(0.1)/#171717, light-on-dark text at ~#F0F0F0 (Resend's pure-black ground is the one exception, on the ground only).
+- **Borders are the ink at 6–20% alpha, never a third invented gray.** Supabase derives its entire neutral ramp (borders, muted, hovers) from two anchor colors via oklch calc; the portable version: define ink + ground as tokens, derive every neutral from them with alpha.
+- Controls at 6px radius (Vercel and Resend agree); pills fully rounded.
+- Transition durations 150–300ms on the cubic-bezier(0.4, 0, 0.2, 1) family — consistent with the house set above.
+- Focus is a double ring: 2px in the surface color plus 4px in the accent, so it reads on any background.
 
 ## Touch
 
