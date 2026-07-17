@@ -10,6 +10,7 @@ Run as a design **studio** taking on a new client. The studio's process is ident
 1. Read [style-history.md](style-history.md) — every row is a direction this studio has already shipped, and its header defines the rule that keeps the new direction from being a rerun.
 2. Classify the input and branch:
    - **Reference given** (URL or screenshot) → load [references/extraction.md](references/extraction.md) and extract raw material before briefing.
+   - **Existing design system** (tokens/theme already in the repo, or the user points at one) → run the engagement system-locked (rules below).
    - **Idea only** → go straight to Brief.
 3. Scale the engagement: full pipeline for product surfaces (landing, app, dashboard, multi-screen flow); for one small component inside an existing design, run Brief-lite (direction + tokens check only) → Build → one crit pass.
 
@@ -39,3 +40,14 @@ Done when every artifact handover.md lists exists and none contradicts the brief
 
 ### 6. Close
 Append the shipped direction as a new row in [style-history.md](style-history.md) (format defined at the top of that file). Done when the row exists.
+
+## System-locked engagements
+
+When the project already has a design system, the system **is** the direction, and four rules change:
+
+- The brief records the system as its constraint set instead of inventing a direction; the choice test judges fit to the system, not novelty.
+- Tokens are consumed, not created — new values enter through the system's own conventions, never beside them.
+- In crit, the Originality criterion becomes **System fidelity**: does every screen read as native to the system?
+- Skip the style-history veto and the closing row: here consistency is the deliverable, and repetition is success.
+
+Everything else — tokens-only styling, the craft floor, the evaluator loop, the handover — applies unchanged.
