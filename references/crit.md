@@ -13,7 +13,7 @@ The builder never grades its own work: agents reliably praise what they made. A 
 ## Rubric (evaluator scores all four)
 
 - **Design quality** — hierarchy, spacing rhythm, composition, color discipline. Does it look like a designed product?
-- **Originality** — evidence of custom decisions, or template layouts, library defaults and AI-generated patterns? The signature element lands, or is decoration?
+- **Originality** — evidence of custom decisions, or template layouts, library defaults and AI-generated patterns? The signature element lands, or is decoration? Run the stranger test against the never-expiring rows in `style-history.md`: resemblance to any of them — including near misses in the same color family — caps this score at 5, whatever the rest of the design does.
 - **Craft** — alignment, consistency of radii/shadows/spacing against tokens, typographic detail, state coverage (hover/focus/empty/loading), motion on the house easing set (entrances focus into place; presses respond; nothing rides a browser-default curve).
 - **Functionality** — the interface works: navigation, interactions, responsive behavior at all three widths, keyboard focus visible.
 

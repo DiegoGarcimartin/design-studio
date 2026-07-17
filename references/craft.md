@@ -24,6 +24,10 @@ Polish is numbers, never adjectives. Distilled from Kevin Kld's "10 rules to shi
 
 Before building any interactive component, list its states — idle / hover / pressed / loading / disabled / empty / success — and build all of them. Expect the build to surface 2–3 states the plan missed; adding those discovered micro-interactions (numbers that roll digit-by-digit, a shimmer sweeping a busy label, icons that cross-fade) is where the polish actually lives, so budget for them rather than treating them as scope creep.
 
+## Detail density
+
+Perceived quality scales with the density of visible decisions: context captions under headings, secondary metadata lines, in-chart annotations, unit labels, tooltips, a second affordance where one would do. A restrained palette must be earned with *more* of these, never fewer — quiet plus sparse reads as unfinished; quiet plus dense reads as expensive.
+
 ## Iterating
 
 Tune one variable at a time — only the shadow stack, only the entrance, only the easing. Describe targets as feel plus reference plus numbers ("like an iOS sheet: weighty, slightly springy, settles fast; ~280ms on --ease-smooth").
