@@ -27,11 +27,26 @@ PMs, product designers and engineers who design-and-build in the same flow with 
 
 ## Install
 
+**Personal** (all your projects, one shared aesthetic memory):
+
 ```bash
 git clone https://github.com/DiegoGarcimartin/design-studio ~/.claude/skills/design-studio
 ```
 
-That's it. The skill is model-invoked: Claude Code fires it when you ask for product UI. Your `style-history.md` starts empty and becomes yours — it is the point of the whole thing, so don't reset it between projects.
+**Team / company** (one repo, everyone gets it via git):
+
+```bash
+git clone https://github.com/DiegoGarcimartin/design-studio your-repo/.claude/skills/design-studio
+rm -rf your-repo/.claude/skills/design-studio/.git   # vendor it; your repo owns the copy
+```
+
+Commit it and every teammate's Claude Code picks it up — no per-person setup.
+
+That's it either way: the skill is model-invoked, so Claude Code fires it when someone asks for product UI. In personal installs, `style-history.md` starts empty and becomes yours — don't reset it between projects; it is the point of the whole thing.
+
+### Plugging in your existing design system
+
+Nothing to configure. If your repo already carries a token/theme layer (CSS variables, Tailwind config, a `tokens.json`, a design-system doc), the skill detects it at intake — or you say "use our design system" — and runs **system-locked**: your system becomes the constraint set, new values enter only through your conventions, and the crit loop scores *fidelity to your system* instead of originality. If your tokens live somewhere unusual, mention the path once; the brief records it and later phases cite the brief.
 
 Optional plugs, used when present, skipped when not:
 
@@ -64,7 +79,10 @@ Built on the shoulders of, and verified against:
 - [Kevin Kld — The 10 rules to ship truly polished UI](https://x.com/kvnkld/status/2066863634949779464) — the craft layer, nearly verbatim in spirit.
 - [julianoczkowski/designer-skills](https://github.com/julianoczkowski/designer-skills) — the `.design/` artifact structure.
 - [superdesign](https://github.com/superdesigndev/superdesign-skill) — the persistent per-project design-system.md pattern.
-- [W3C DTCG Design Tokens spec (2025.10)](https://www.designtokens.org/tr/2025.10/format/) — the token format.
+- [OneRedOak/claude-code-workflows](https://github.com/OneRedOak/claude-code-workflows/tree/main/design-review) — the live-environment-first review discipline and the three-viewport check.
+- [Dyad](https://github.com/dyad-sh/dyad) and [Onlook](https://github.com/onlook-dev/onlook) — open-source reference implementations of the v0/Lovable class; fixed stack and live-preview-to-code mapping, respectively.
+- [W3C DTCG Design Tokens spec (2025.10)](https://www.designtokens.org/tr/2025.10/format/) — the token format; [Style Dictionary](https://styledictionary.com/) and [Terrazzo](https://terrazzo.app/) turn it into platform outputs headlessly.
+- [Design Arena](https://www.designarena.ai/) — the human-preference benchmark where agent-built UI is actually judged; useful for calibrating expectations.
 - [mattpocock/skills — writing-great-skills](https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-great-skills) — how the docs and skill files themselves are written.
 
 ## Contributing
