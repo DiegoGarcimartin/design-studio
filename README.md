@@ -15,6 +15,8 @@ AI is bad at design for five specific, well-documented reasons — Phil Morton's
 | **Same model, same blind spots** — an evaluator sharing the generator's weights shares its missing taste (it has scored AI-default palettes as "original") | Mitigated, not solved: separated evaluator agent, adversarial mandate, stranger-test score cap — and the human-director gate above as the honest backstop |
 | **Screens without reasoning** — training data shows *what* interfaces look like, never *why* they work | Rules carry their why: craft recipes as numbers with rationale, [field notes measured live](references/craft.md) from Vercel/Supabase/Resend computed styles, and a per-project `decisions.md` that records the reason behind every choice |
 
+Two notes on scope. The cross-project memory row is — as far as a fairly exhaustive July-2026 sweep of GitHub, skill marketplaces, X and Reddit could tell — this skill's original contribution; nothing published covers it. And this skill deliberately does *not* adopt the "use AI only for parts of design" conclusion: the whole pipeline runs, with the human at exactly two gates — picking the direction, and the closing verdict. Several of the skill's mechanisms (the binding brief with numeric constraints, the measured craft floor, design-ops artifacts, system-locked mode for existing design systems) address failures no diagnosis article names at all.
+
 ## What it covers
 
 | Component | How |
