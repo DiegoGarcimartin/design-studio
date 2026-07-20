@@ -17,6 +17,10 @@ The builder never grades its own work: agents reliably praise what they made. A 
 - **Craft** — alignment, consistency of radii/shadows/spacing against tokens, typographic detail, state coverage (hover/focus/empty/loading), motion on the house easing set (entrances focus into place; presses respond; nothing rides a browser-default curve).
 - **Functionality** — the interface works: navigation, interactions, responsive behavior at all three widths, keyboard focus visible.
 
+The evaluator measures, never eyeballs: pixel-sample colors and contrast ratios, measure gridline and rail positions, verify data consistency between chart, legend and KPIs. A claim without a measurement is an impression, not a finding.
+
 ## Exit condition
 
-Ship when **every criterion scores ≥ 8** or when **two consecutive rounds fail to raise the total** — whichever comes first, with a minimum of 2 rounds and a maximum of 6 for a full product surface (1 round for Brief-lite work). Ship the *best-scoring* snapshot, not the latest: if an earlier round scored higher, restore it and carry forward only the later fixes that don't regress it.
+The score loop runs until **every criterion scores ≥ 8** or **two consecutive rounds fail to raise the total** — whichever comes first, with a minimum of 2 rounds and a maximum of 6 for a full product surface (1 round for Brief-lite work). Ship the *best-scoring* snapshot, not the latest: if an earlier round scored higher, restore it and carry forward only the later fixes that don't regress it.
+
+**The evaluator cannot certify ship — only "ready for the director".** Design has no compiler, and a same-model evaluator shares the generator's blind spots (it has scored AI-default palettes as original). When the score loop exits, present the rendered result to the user for the closing verdict, naming what only human eyes can settle: whether the direction reads as designed rather than generated, and how the motion feels in the live page. Their verdict outranks every score in this file.
